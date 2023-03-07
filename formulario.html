@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <h1>Formularios</h1>
+    <form action="" method="post" enctype="text/plain">
+        <fieldset> 
+            <legend><label for="Usuario">
+                Datos del usuario
+            </label></legend>
+            <input type="text" placeholder="Usuario" maxlength="12" name="Usuario" id="Usuario" /><br>
+            <label for="nombre">Nombres</label>
+            <input type="text" placeholder="Nombres" maxlength="19" name="Nombres" id="Nombres" /><br>
+            <label for="nombre">Apellido P</label>
+            <input type="text" placeholder="ApellidoP" maxlength="19" name="ApellidoP" id="ApellidoP" /><br>
+            <label for="nombre">Apellido M</label>
+            <input type="text" placeholder="ApellidoM" maxlength="19" name="ApellidoM" id="ApellidoM" /><br>
+            <label for="Pass">Contraseña</label>
+            <input type="password" placeholder="password" name="pass" id="pass" required/><br>
+            <input type="submit"/>
+
+            <label for="comenta">Comentarios</label><br>
+            <textarea name="comenta" id="comenta" cols="25" rows="10"></textarea><br>
+
+            <label for="email">E-mail</label>
+            <input type="email" name="correo" id="correo" required/>
+            <input type="submit"/><br>
+
+            <label for="fecha">fecha</label>
+            <input type="date" name="fecha" id="fecha" />
+            <input type="submit"/><br>
+
+            <label for="color">Color</label>
+            <input type="color" name="color" id="color" />
+            <input type="submit"/><br>
+
+            <label for="mes">Mes</label>
+            <input type="month" name="month" id="month" />
+            <input type="submit"/><br>
+
+            <label for="semana">Semana</label>
+            <input type="week" name="semana" id="semana" />
+            <input type="submit"/><br>
+
+            <label for="fecha-hora">Fecha y Hora</label>
+            <input type="datetime-local" name="fecha-hora" id="fecha-hora" />
+            <input type="submit"/><br>
+
+            <label for="archivo">Adjuntar Archivo</label>
+            <input type="file" name="archivo" id="archivo" />
+            <input type="submit"/><br>
+
+            <label for="pagina">Pagina Web</label>
+            <input type="url" name="pagina" id="pagina" />
+            <input type="submit"/><br>
+
+            <label for="number">Cantidada a comprar</label>
+            <input type="number" name="number" id="number" />
+            <input type="submit"/><br>
+
+            <label for="rango">Calificación del Producto</label>
+            <input type="range" name="rango" id="rango" />
+            <input type="submit"/><br>
+
+            <h3>Indica tu forma de pago</h3>
+            <input name="TarjetaC" type="checkbox" value="TarjetaC" checked>
+            <label for="TarjetaC">Tarjeta de Credito</label><br>
+           
+            <input name="TarjetaD" type="checkbox" value="TarjetaD">
+            <label for="TarjetaD">Tarjeta de Debito</label><br>
+
+            <input name="Efectivo" type="checkbox" value="Efectivo">
+            <label for="Efectivo">Efectivo</label><br>
+
+            <h3>Indica tu Sexo</h3>
+            <input name="Sexo" type="radio" value="m" id="Sexo" checked>
+            <label for="Sexo">Masculino</label><br>
+            <input name="Sexo" type="radio" value="f" id="Sexo">
+            <label for="Sexo">Femenino</label><br>
+
+            <h3>Categoria de Producto a buscar</h3>
+            <select size="7" multiple>
+                <optgroup label="Alimentos">
+                <option>Lacteos</option>
+                <option>Refrigerados</option>
+                <option>Carnes</option>
+                <option>Frutas y Verduras</option>
+                </optgroup>
+                <optgroup label="Cuidado Personal">
+                <option>Belleza</option>
+                <option>Higiene Personal</option>
+                </optgroup>
+                <optgroup label="Hogar">
+                <option>Productos de Limpieza</option>
+                <option>Jardineria</option>
+                </optgroup>
+            </select>
+            <input type="submit">
+
+        </fieldset>
+    </form>
+</body>
+</html>
