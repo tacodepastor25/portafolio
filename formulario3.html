@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra de Boletos Cinepolis</title>
+    <style>
+        table{
+            width: 90%;
+          
+        }
+        th 
+        {
+           
+         
+           text-align: left;
+        }
+        td{
+
+            text-align: left;
+        }
+       
+    </style>
+</head>
+<body background="Trabajos/img/fondoazulc.jfif"
+style="background-repeat: no-repeat; background-size: 100%; background-attachment: fixed;">
+<div align="center">
+<img src="Trabajos/img/cinepolis-logo-5.png" width="72%"/>
+</div>
+<h1 align="center">Compra de Boletos</h1>
+<h2 align="center">Ingrese sus datos:</h2>
+
+<form action="" method="post" enctype="text/plain">
+    <fieldset>
+        <legend>Datos de Usuario</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre:  </th>
+                    <th>Apellido Paterno:  </th>
+                    <th>Apellido Materno:  </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" placeholder="Nombre" maxlength="14" name="Nombre" id="Nombre" required/></td>
+                    <td><input type="text" placeholder="Apellido Paterno" maxlength="14" name="Apellidop" id="Apellidop" required/></td>
+                    <td><input type="text" placeholder="Apellido Materno" maxlength="14" name="Apellidom" id="Apellidom" required/></td>
+                </tr>
+                <tr>
+                    <th>Usuario Cinepolis:  </th>
+                    <th>Contraseña:  </th>
+                  
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="Nombre Usuario" maxlength="14" name="Nombreu" id="Nombreu" /></td>
+                    <td><input type="text" placeholder="Password" maxlength="14" name="Password" id="Password" /></td>
+                </tr>    
+            </tbody>      
+        </table>
+
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Pelicula</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th><img src="Trabajos/img/dms2.jpeg" width="50%" height="235">
+                    </th>
+                    <th align="left">Fecha: </th>
+                    <th align="right">Tipo de Sala: </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>    </td>
+                    <td><input type="date" name="Fecha" id="Fecha" required/></td>
+                    <td>
+                        <input name="Sala" type="radio" value="n" id="Sala" required>
+                        <label for="Sala">Normal</label><br>
+                        <input name="Sala" type="radio" value="v" id="Sala" required>
+                        <label for="Sala">VIP</label><br>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="3">
+                    Tanjiro Kamado, junto con Inosuke Hashibira, un niño criado por jabalíes que lleva una cabeza de jabalí, y Zenitsu Agatsuma, 
+                    un niño asustado que revela su verdadero poder cuando duerme, 
+                    aborda el Tren Infinito en una nueva misión con el Pilar de la Llama, Kyojuro Rengoku. , 
+                    para derrotar a un demonio que ha estado atormentando a la gente y matando a los asesinos de demonios que se le oponen.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                    <label for="email"><br>Ingrese su Gmail</label>
+                    <input type="email" name="correo" id="correo" required/>
+                    
+                    </td>
+                    <td>
+                        <label for="number">Cantidada a comprar</label>
+                        <input type="number" name="number" id="number" />
+                        <input type="submit"/>
+                    </td>
+                </tr>
+
+            </tbody>      
+        </table>
+
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Forma de Pago</legend>
+        <h3>Indica tu forma de pago</h3>
+            <input name="TarjetaC" type="checkbox" value="TarjetaC" checked>
+            <label for="TarjetaC">Tarjeta de Credito</label><br>
+           
+            <input name="TarjetaD" type="checkbox" value="TarjetaD">
+            <label for="TarjetaD">Tarjeta de Debito</label><br>
+
+            <input name="Efectivo" type="checkbox" value="Efectivo">
+            <label for="Efectivo">Efectivo</label>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo De Tarjeta:  </th>
+                        <th>Nombre del Propietario:  </th>
+                        <th>Numero de Tarjeta:  </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" name="marca" id="marca" list="marcas" required>
+                            <datalist id="marcas">
+                                <option>MASTERCARD</option>
+                                <option>Club Cinepolis</option>
+                                <option>American Express</option>
+                                <option>BBVA</option>
+                                <option>Mercado Pago</option>
+                            </datalist><br></td>
+                        <td><input type="text" placeholder="Nombre Y Apellido" maxlength="24" name="Apellidop" id="Apellidop" required/></td>
+                        <td><input type="text" placeholder="Numero de Tarjeta" maxlength="19" name="Apellidom" id="Apellidom" required/></td>
+                    </tr>
+                    <tr>
+                        <th>Codigo de Descuento:  </th>
+                        <th>Fecha de Vencimiento:  </th>
+                        <th>Foto de tarjeta</th>
+                    </tr>
+
+                    <tr>
+                        <td><input type="text" placeholder="Codigo" maxlength="17" name="Codigo" id="Codigo" /></td>
+                        <td><input type="date" name="fecha" id="fecha" required/>
+                            <input type="submit"/>
+                        </td>
+                        <td><input type="file" name="archivo" id="archivo" /></td>
+                    </tr>  
+
+                    <tr>
+                        <td>
+                        <input type="submit" name="enviar" id="enviar" value="Enviar datos">
+                        <input type="reset" name="borrar" id="borrar" value="borrar datos">
+                        </td>
+                    </tr>
+                </tbody>      
+            </table>
+    </fieldset>  
+
+</form>
+<footer align="right">
+    <b>&copy Cinepolis 2023</b>
+</footer>
+
+</body>
+</html>
