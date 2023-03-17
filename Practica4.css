@@ -1,0 +1,33 @@
+#p1{
+    text-decoration: dashed;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(118, 14, 216);
+    font-style: italic;
+    font-size: 19px;
+}
+.parrafos{
+    color: chartreuse;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   
+
+}
+.titulos{
+    color: blue;
+    font-weight: 600;
+}
+#T2{
+    font-size: 19px;
+    
+}
+#f1{
+    background-color: aliceblue;
+}
+#b1{
+    margin: 0px 20px;
+}
+#uno{
+    background-color: rgba(128, 255, 0, 0.144);
+}
+#dos{
+    background-color: rgba(128, 255, 0, 0.144);
+}
