@@ -1,0 +1,52 @@
+@font-face {
+    font-family: fuente1;
+    src: url(DeliciousHandrawn-Regular.ttf);
+}
+#encabezado1{
+    font-family: 'fuente1';
+    text-align: center;
+    display: block;
+    width: 200px;
+    padding: 20px;
+    border: 1px;
+    margin: 15px auto;
+    background-color: aqua ;
+    color: red;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px 30px 30px 40px;
+    box-shadow: rgba(1, 1, 22, 0.637) 10px -15px 5px inset;
+    -moz-box-shadow: rgb(rgba(3, 3, 26, 0.829)) 10px 15px;
+    -webkit-box-shadow: rgb(rgba(1, 1, 22, 0.76)) 10px 15px;
+    
+}
+#encabezado1:hover{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    display: block;
+    width: 400px;
+    padding: 20px;
+    border: 1px;
+    margin: 15px auto;
+    background-color: rgb(94, 255, 0) ;
+    color: rgb(99, 3, 3);
+    transform: skew(15deg);
+    
+}
+#encabezado1:active{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    display: block;
+    width: 400px;
+    padding: 20px;
+    border: 1px;
+    margin: 15px auto;
+    background-color: rgb(255, 145, 0) ;
+    color: rgb(19, 0, 0);
+    transform: skew(15deg);
+    transform: translate(50px);
+    box-shadow: rgba(20, 37, 78, .7) 10px 10px 5px;
+    background: -moz-radial-gradient(top,ellipse, rgb(229, 255, 0) 10%, blueviolet 90%);
+    background: radial-gradient(top,ellipse, rgb(255, 251, 0) 10%,blueviolet 90%);
+    background: -webkit-radial-gradient(top,ellipse, rgb(255, 251, 0) 10%, blueviolet 90%);
+}
