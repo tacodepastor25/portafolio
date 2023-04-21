@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #button1{
+            position: relative;
+            background-color: aquamarine;
+            top: 10px;
+            left: 10px;
+        }
+        #button2{
+            position: relative;
+            background-color: rgb(176, 240, 181);
+            top: 10px;
+            left: 20px;
+        }
+        #button3{
+            position: relative;
+            background-color: rgb(192, 206, 250);
+            top: 10px;
+            left: 30px;
+        }
+        #button4{
+            position: relative;
+            background-color: rgb(192, 206, 250);
+            top: 10px;
+            left: 40px;
+        }
+    
+    </style>
+    <script src="practica2_1.js"></script>
+    <title>Practica 2 java</title>
+</head>
+<body>
+    <h1>Operaciones Matematicas</h1>
+    <div>
+    <form method="post" action="" enctype="text/plain">
+        <label for="nombre" style="">Escribe un número</label><br>
+        <input type="text" name="numero1" id="numero1"><br>
+
+        <label for="nombre">Escribe un número</label><br>
+        <input type="text" name="numero2" id="numero2"><br>
+
+        <input type="button1" name="button1" value="sumar" id="button1" onclick="suma()">
+        <input type="button2" name="button2" value="restar" id="button2" onclick="resta()">
+        <input type="button3" name="button3" value="multiplicar" id="button3" onclick="multiplica()">
+        <input type="button4" name="button4" value="dividir" id="button4" onclick="dividir()">
+    </form>
+    </div>
+    <h2>Tu resultado es: </h2>
+    <p id="resultado" name="resultado"></p>
+</body>
+</html>
