@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Director (año)',  'Rotten Tomatoes', 'IMDB'],
+          ['The Witcher (2023)',      8.1,         7.9],
+          ['Rey Arturo (2017)',       6.5,         6.1],
+          ['John Carter (2012)',      5.2,         6.0],
+          ['Jurasic world dominio (2022)', 2.9,         5.6]
+        ]);
+
+        var options = {
+          title: 'The decline of \'The 39 Steps\'',
+          vAxis: {title: 'Accumulated Rating'},
+          isStacked: true
+        };
+
+        var chart = new google.visualization.SteppedAreaChart(document.getElementById('chart_div'));
+
+        chart.draw(data, options);
+      }
+    </script>
+</head>
+<body>
+    <div id="chart_div" style="width: 1000px; height: 600px;"></div>
+</body>
+</html>
