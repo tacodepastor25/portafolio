@@ -7,7 +7,7 @@ if(isset($_POST["submit"]))
     $correo = $_POST("email");
     $mensaje = $_POST("mensaje");
     $headers = "MIME-Version: 1.0\r\n";
- 
+    $headers = "Content-type: text/html; charset=utf8\r\n";
     $cuerpo = " Envidado por: $nomb\n Email: $correo\n Mensaje: $mensaje\n";
 
     $bool = mail($para,$asunto,$cuerpo,$headers);
