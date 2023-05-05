@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 4</title>
+    <script src="practica4.js"></script>
+</head>
+<body>
+    <h3 style="padding-left: 600px;">Ingrese sus datos</h3>
+    <div style="position: absolute; padding-left: 600px;">
+        <form method="post">
+            <label for="nombre">Escribe tu nombre: </label><br>
+            <input type="text" id="nombre" name="nombre" placeholder="User"><br>
+
+            <label for="ap">Escribe tu Apellido Paterno: </label><br>
+            <input type="text" id="ap" name="ap" placeholder="Apellido P"><br>
+
+            <label for="am">Escribe tu Apellido Materno: </label><br>
+            <input type="text" id="am" name="am" placeholder="Apellido M"><br>
+
+            <label for="year">Escribe tu año de nacimiento: </label><br>
+            <input type="number" id="year" name="year"><br>
+
+            <label for="mes">Escribe tu mes de nacimiento: </label><br>
+            <input type="number" id="mes" name="mes"><br>
+
+            <label for="dia">Escribe tu dia de nacimiento: </label><br>
+            <input type="number" id="dia" name="dia"><br>
+
+            <label for="resultado">Resultado:</label><br>
+            <input type="text" name="resultado" id="resultado"><br>
+
+            
+            <input type="button" class="btn-azul" 
+            style="background-color: blue;
+            color: white;
+            border: solid;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;"
+            onclick="rfc()" 
+            value="generar rfc">
+
+        </form>
+        
+    </div>
+    
+</body>
+</html>
