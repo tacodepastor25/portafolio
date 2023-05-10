@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 6</title>
+
+    <style>
+		h1{
+			background-color: #d4e3f7; /* Color de fondo azul tenue */
+			color: #000000; /* Color de texto negro */
+			padding: 10px; /* Añadir un poco de espacio alrededor del contenido */
+			border: none; /* Quitar el borde predeterminado */
+			font-size: 20px; /* Tamaño de fuente */
+			font-weight: bold; /* Texto en negrita */
+			width: 300px; /* Ancho del cuadro de texto */
+		}
+	</style>
+
+    <script>
+    function addNewState() {
+        // Agregar un nuevo estado a la historia
+        history.pushState({page: 1}, "New State", "?page=1");
+    }
+
+    // Detectar los eventos de cambio de estado de la historia
+    window.onpopstate = function(event) {
+        if (event.state.page == 1) {
+            alert("Has navegado hacia el estado 1");
+        } else {
+            alert("Has navegado hacia el estado 2");
+        }
+
+        // Obtener la cantidad de estados en la historia del navegador
+		var historyLength = history.length;
+
+
+    };
+    function mostrarCantidadEstados() {
+			// Obtener la cantidad de estados en la historia del navegador
+			var historyLength = history.length;
+
+			// Mostrar la cantidad de estados en un alert
+			alert("La cantidad de estados en la historia del navegador es: " + historyLength);
+    }
+    
+    </script>
+</head>
+<body>
+    <h1>API History</h1>
+    <h2>Funciones de history</h2>
+
+    <p>La API History de HTML te permite interactuar con la historia del navegador del usuario,
+         lo que significa que puedes controlar el botón "Atrás" y "Adelante" del navegador.</p>
+    <p>Este ejemplo muestra cómo utilizar la API History para agregar un nuevo estado a la historia del navegador
+         cuando se hace clic en un botón. Luego, utiliza el evento onpopstate para detectar cuándo el usuario ha navegado hacia atrás o hacia adelante en la historia. 
+        En este caso, el evento muestra una alerta dependiendo del estado al que el usuario haya navegado.</p>     
+    <ul>
+        <li>Funciones comunes</li>
+        <li>history.length: Esta propiedad devuelve la cantidad de estados en la historia del navegador.</li>
+        <li>history.forward(): Esta función hace que el navegador avance al siguiente estado en la historia.</li>
+        <li>history.back(): Esta función hace que el navegador vuelva al estado anterior en la historia.</li>
+        <li>history.go(delta): Esta función te permite navegar a un estado específico en la historia. 
+            El parámetro delta especifica la cantidad de estados que se deben mover hacia atrás (valores negativos) 
+            o hacia adelante (valores positivos) en la historia.</ul>
+    </ul>    
+
+    <button onclick="history.back()">Regresar</button>
+    <button onclick="history.forward()">Adelante</button>
+    <button onclick="history.go(-2)">Retroceder 2 páginas</button>
+    <button onclick="mostrarCantidadEstados()">Mostrar cantidad de estados</button>    
+    
+</body>
+</html>
