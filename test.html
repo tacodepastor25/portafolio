@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test.css">  <!--Enlaza con css externo-->
+    <title>Document</title>
+    <!--Todo esto es para convertir las respuestas a pdf, por lo que no lo usaremos ahorita-->
+    <script type="text/javascript" src="PDF/js/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="PDF/js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="PDF/jspdf.js"></script>
+    <script type="text/javascript" src="PDF/jspdf.plugin.addimage.js"></script>
+    <script type="text/javascript" src="PDF/jspdf.plugin.standard_fonts_metrics.js"></script>
+    <script type="text/javascript" src="PDF/jspdf.plugin.split_text_to_size.js"></script>
+    <script type="text/javascript" src="PDF/jspdf.plugin.from_html.js"></script>
+
+    <script>
+        //Escribimos la función que calculara las respuestas correctas
+        function califica(){
+            var total=0;
+                for(var x=1;x<=4;x++){  //ciclo para evaluar cada respuesta
+                    var res=0;
+                    var nom="r"+x;
+                    var result=document.getElementsByName(nom);
+                    for(var i=0;i<result.length;i++){
+                        if(result[i].checked==true){
+                            res=parseInt(result[i].value);
+                        }
+                    }
+                    total=total+res;
+                    document.getElementById("total").innerHTML="Puntos obtenidos: "+total+"puntos"    ; //concatenacion de puntos con total
+                }
+                if(total==20){  //comentario dependiendo de tu desempeño
+                    document.getElementById("comentario").innerHTML="Excelente!!";
+                }else{
+                    if(total==15){
+                        document.getElementById("comentario").innerHTML="Bien";
+                    }else{
+                        if(total<=10){
+                            document.getElementById("comentario").innerHTML="Estudia más";
+                        }
+                    }
+                }
+
+        };
+
+        function generar(){
+            //Crear un objeto en PDF
+            var doc = new jsPDF();
+
+            //definir tamaño de letra
+            doc.setFontSize(40);
+            //color de texto
+            doc.setTextColor(9,7,121);
+            doc.text(40, 20, "Encuesta");
+            doc.setTextColor(17,122,209);   //color en rgb
+            doc.setFontSize(30);
+            doc.text(50,35, "Es importante tu participación"); //ubicacion
+
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Cuestionario de conocimientos de cultura general sobre la Música</h1>
+    <div id="contiene">
+    <form>
+        <div style="text-align: center; align-items: center;">
+            <ul>    <!--Preguntas con sus opciones-->
+                <li>¿Cuál es el Disco más vendido de la historia?</li>
+                <input type="radio" name="r1" id="r1" value="0"/>The Dark Side of the moon<br>
+                <input type="radio" name="r1" id="r1" value="0"/>Back in Black<br>
+                <input type="radio" name="r1" id="r1" value="5"/>Thriller<br>
+                <input type="radio" name="r1" id="r1" value="0"/>X 100PRE<br>
+                
+                <li>¿Quíen es conocido como el "Rey del Rock N Roll"?</li>
+                <input type="radio" name="r2" id="r2" value="0"/>Freddy Mercury<br>
+                <input type="radio" name="r2" id="r2" value="5"/>Elvis Presley<br>
+                <input type="radio" name="r2" id="r2" value="0"/>Luis Miguel<br>
+                <input type="radio" name="r2" id="r2" value="0"/>John Lenon<br>
+
+                <li>¿Quíen cantó la canción Girls Just Wanna Have Fun?</li>
+                <input type="radio" name="r3" id="r3" value="5"/>Cyndi Lauper<br>
+                <input type="radio" name="r3" id="r3" value="0"/>Madonna<br>
+                <input type="radio" name="r3" id="r3" value="0"/>Nicky Minaj<br>
+                <input type="radio" name="r3" id="r3" value="0"/>Britney Spears<br>
+
+                <li>¿Cuantas cuerdas tiene un violín tradicional</li>
+                <input type="radio" name="r4" id="r4" value="0"/>3<br>
+                <input type="radio" name="r4" id="r4" value="5"/>4<br>
+                <input type="radio" name="r4" id="r4" value="0"/>5<br>
+                <input type="radio" name="r4" id="r4" value="0"/>6<br>
+            </ul>
+            <input type="button" id="b1" name="b1" class="btn-azul-mediano"  value="Enviar tu respuesta" onclick="califica()"><br>
+            
+            <button name="b2" class="btn-azul-mediano" onclick="generar()" >Haz clic aquí para enviar respuesta</button><br>
+        </div>
+        <p name="total" id="total" ></p>
+        <p name="comentario" id="comentario" ></p><br>
+    </form>
+    <!--<button name="b1" class="btn-azul-mediano" onclick="califica()">Haz clic aquí para enviar respuesta</button><br> -->
+    </div>
+    
+</body>
+</html>
