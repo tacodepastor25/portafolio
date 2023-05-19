@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Practico 3</title>
+    <link rel="stylesheet" href="Practico3.css">
+    <script>
+        function edad() {
+            var nom=document.getElementById("nombre").value;
+            var ed=document.getElementById("fecha").value;
+            if(ed !== ""){
+                var fechaN = new Date(ed);
+                var mesN = fechaN.getMonth() + 1; 
+                
+                if (mesN === 1) {
+                    var imagen = document.createElement("img");
+                    imagen.src = "dosporuno.jfif";
+                    document.body.appendChild(imagen);
+                    document.getElementById("comentario").innerHTML="Felicidades, obtuviste un 2x1!";
+            } else{
+                document.getElementById("comentario").innerHTML="No obtuviste descuento, suerte a la proxima";
+            }
+
+        }
+    }
+
+    </script>
+</head>
+<body>
+    <h1>Puedes obtener un producto Gratis!</h1>
+    <form method="post">
+        <label for="nombre">Tu nombre: </label><br>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre de usuario"><br>
+        
+        <label for="fecha">Tu fecha de nacimiento</label>
+            <input type="date" name="fecha" id="fecha" /><br>
+        <div style="text-align: center; align-items: center;">
+        <input type="button" id="b1" name="b1" class="btn-azul-mediano"  value="Enviar formulario" onclick="edad()"><br>    
+        </div>  
+
+    </form>
+    <p name="comentario" id="comentario" ></p><br>
+    
+</body>
+</html>
